@@ -2,7 +2,9 @@
 
 /**
  * main - entry point
- * Return 0
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
@@ -21,7 +23,7 @@ int main(int argc, char *argv[])
 	{
 		fprintf(stderr, "Error: can't open file %s\n", argv[1]);
 	}
-	while ((line = getline(&buff, &count,fptr)) != -1)
+	while ((line = getline(&buff, &count, fptr)) != -1)
 	{
 		factorize(buff);
 	}
